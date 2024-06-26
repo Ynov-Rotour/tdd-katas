@@ -46,7 +46,13 @@ describe('Kata 2 - Find custom separator', () => {
 	it('Should return custom separator when input starts with "//"', () => {
 		const result = findCustomSeparator('//;\n1;2');
 		const result2 = findCustomSeparator('//,\n1,2');
+		const result3 = findCustomSeparator('//...\n1.2');
 		expect(result).toBe(';');
 		expect(result2).toBe(',');
+		expect(result3).toBe('...');
+	});
+	it('Should return empty string when input does not start with "//"', () => {
+		const result = findCustomSeparator('1,2');
+		expect(result).toBe('');
 	});
 });
