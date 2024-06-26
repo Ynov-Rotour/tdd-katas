@@ -10,4 +10,12 @@ describe('Kata 2 - String calculator', () => {
 		const result = add('1');
 		expect(result).toBe(1);
 	});
+	it('Should return the number when one number is passed', () => {
+		const result1 = add('2');
+		const result2 = add('33');
+		const result3 = add('444');
+		expect(result1).toBe(2);
+		expect(result2).toBe(33);
+		expect(result3).toBe(444);
+	});
 });
