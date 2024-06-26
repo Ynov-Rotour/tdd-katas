@@ -46,6 +46,10 @@ describe('Kata 2 - String calculator', () => {
 		expect(ex2).toBe(6);
 		expect(ex3).toBe(7);
 	});
+	it('Should throw an error if a custom separator is specified and another separator is used', () => {
+		const addFn = () => add('//|\n1|2,3');
+		expect(addFn).toThrowError("'|' expected but ',' found at position 3.");
+	})
 });
 
 describe('Kata 2 - Find custom separator', () => {
