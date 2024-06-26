@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { add } from '../katas/Kata2';
+import { add, findCustomSeparator } from '../katas/Kata2';
 
 describe('Kata 2 - String calculator', () => {
 	it('Should return 0 when input is empty', () => {
@@ -35,5 +35,16 @@ describe('Kata 2 - String calculator', () => {
 	it('Should throw an error if a separator is at the end of the string', () => {
 		const addFn = () => add('1,2,');
 		expect(addFn).toThrowError('Invalid input');
+	});
+	// it('Should handled custom separators', () => {
+	// 	const result = add('//;\n1;2');
+	// 	expect(result).toBe(3);
+	// });
+});
+
+describe('Kata 2 - Find custom separator', () => {
+	it('Should return custom separator when input starts with "//"', () => {
+		const result = findCustomSeparator('//;\n1;2');
+		expect(result).toBe(';');
 	});
 });
