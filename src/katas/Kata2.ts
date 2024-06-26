@@ -1,3 +1,4 @@
 export const add = (input: string): number => {
-	return 0;
+	if (input === '') return 0;
+	return 1;
 }
