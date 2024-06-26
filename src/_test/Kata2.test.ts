@@ -6,4 +6,8 @@ describe('Kata 2 - String calculator', () => {
 		const result = add('');
 		expect(result).toBe(0);
 	});
+	it('Should return 1 when input is "1"', () => {
+		const result = add('1');
+		expect(result).toBe(1);
+	});
 });
