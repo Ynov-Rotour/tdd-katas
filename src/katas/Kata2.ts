@@ -12,7 +12,10 @@ export const add = (input: string): number => {
 	let strNumbers = input;
 	if (customSeparator) {
 		strNumbers = input.slice(input.indexOf('\n') + 1)
-		if (strNumbers.includes(',')) throw new Error(`'${customSeparator}' expected but ',' found at position ${strNumbers.indexOf(',')}.`);
+		// regex that matches anything that is not the custom separator or a number
+		const regex = new RegExp(`[^${customSeparator}\\d]`);
+		const matches = strNumbers.match(regex);
+		if (strNumbers.match(regex)) throw new Error(`'${customSeparator}' expected but '${matches[0]}' found at position ${matches.index}.`);
 	};
 
 	const defaultSeparators = /,|\n/; // matches comma (,) or newline (\n)
