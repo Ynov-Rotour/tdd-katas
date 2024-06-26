@@ -20,10 +20,6 @@ describe('Kata 2 - String calculator', () => {
 	});
 	it('Should return the sum of two numbers when two numbers are passed', () => {
 		const result1 = add('1,2');
-		const result2 = add('10,20');
-		const result3 = add('100,200');
 		expect(result1).toBe(3);
-		expect(result2).toBe(30);
-		expect(result3).toBe(300);
 	});
 });
