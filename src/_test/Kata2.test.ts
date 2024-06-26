@@ -36,10 +36,10 @@ describe('Kata 2 - String calculator', () => {
 		const addFn = () => add('1,2,');
 		expect(addFn).toThrowError('Invalid input');
 	});
-	// it('Should handled custom separators', () => {
-	// 	const result = add('//;\n1;2');
-	// 	expect(result).toBe(3);
-	// });
+	it('Should handled custom separators', () => {
+		const result = add('//;\n1;2');
+		expect(result).toBe(3);
+	});
 });
 
 describe('Kata 2 - Find custom separator', () => {
