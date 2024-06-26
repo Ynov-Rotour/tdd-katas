@@ -38,7 +38,13 @@ describe('Kata 2 - String calculator', () => {
 	});
 	it('Should handled custom separators', () => {
 		const result = add('//;\n1;2');
+		const ex1 = add('//;\n1;3')
+		const ex2 = add('//|\n1|2|3');
+		const ex3 = add('//sep\n2sep5')
 		expect(result).toBe(3);
+		expect(ex1).toBe(4);
+		expect(ex2).toBe(6);
+		expect(ex3).toBe(7);
 	});
 });
 
