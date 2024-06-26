@@ -45,6 +45,8 @@ describe('Kata 2 - String calculator', () => {
 describe('Kata 2 - Find custom separator', () => {
 	it('Should return custom separator when input starts with "//"', () => {
 		const result = findCustomSeparator('//;\n1;2');
+		const result2 = findCustomSeparator('//,\n1,2');
 		expect(result).toBe(';');
+		expect(result2).toBe(',');
 	});
 });
