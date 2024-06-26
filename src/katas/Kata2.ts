@@ -1,5 +1,7 @@
 export const findCustomSeparator = (input: string): string => {
-	return ';'
+	const endOfCustomSeparator = input.indexOf('\n');
+	const customSeparator = input.slice(2, endOfCustomSeparator);
+	return customSeparator;
 }
 
 export const add = (input: string): number => {
