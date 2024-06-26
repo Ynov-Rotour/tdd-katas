@@ -22,8 +22,14 @@ describe('Kata 2 - String calculator', () => {
 		const result1 = add('1,2');
 		expect(result1).toBe(3);
 	});
-	it('Should handle "\n" as separator in addition of comma', () => {
+	it('Should handle "\\n" as separator in addition of comma', () => {
 		const result1 = add('1\n2');
 		expect(result1).toBe(3);
+		const result2 = add('1\n2,3');
+		expect(result2).toBe(6);
+	});
+	it('Should handle mutliseparators', () => {
+		const result = add('1\n,2');
+		expect(result).toBe(3);
 	});
 });
