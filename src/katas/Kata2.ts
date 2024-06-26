@@ -1,3 +1,7 @@
+export const findCustomSeparator = (input: string): string => {
+	return ';'
+}
+
 export const add = (input: string): number => {
 	if (input === '') return 0;
 	const regex = /,|\n/; // matches comma (,) or newline (\n)
