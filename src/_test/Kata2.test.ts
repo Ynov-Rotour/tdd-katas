@@ -32,4 +32,8 @@ describe('Kata 2 - String calculator', () => {
 		const result = add('1\n,2');
 		expect(result).toBe(3);
 	});
+	it('Should throw an error if a separator is at the end of the string', () => {
+		const addFn = () => add('1,2,');
+		expect(addFn).toThrowError('Invalid input');
+	});
 });
